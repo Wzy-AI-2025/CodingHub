@@ -8,5 +8,7 @@
  */
 int maxDepth(struct TreeNode* root) {
     if(root==NULL)return 0;
-    return maxDepth(root->left)>maxDepth(root->right)?maxDepth(root->left)+1:maxDepth(root->right)+1;
+    int l=maxDepth(root->left);
+    int r=maxDepth(root->right);
+    return l>r?l+1:r+1;
 }
