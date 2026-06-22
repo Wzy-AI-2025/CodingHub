@@ -12,4 +12,4 @@ int diameterOfBinaryTree(struct TreeNode* root) {
     ans = 0;
     depth(root);
     return ans;
-}
+}//
