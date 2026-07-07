@@ -1,4 +1,4 @@
-#ifndef CONTACT_h//防止头文件重复包含,避免重复定义
+﻿#ifndef CONTACT_h//防止头文件重复包含,避免重复定义
 #define CONTACT_h
 #define MAX_NAME 20//姓名最大长度
 #define MAX_SEX 6//性别

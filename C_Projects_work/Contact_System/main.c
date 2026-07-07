@@ -1,4 +1,4 @@
-#include"contact.h"
+﻿#include"contact.h"
 #include<stdio.h>
 void Menu(){
     printf("------------通讯录------------\n");
