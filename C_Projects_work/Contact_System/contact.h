@@ -1,5 +1,6 @@
 ﻿#ifndef CONTACT_h//防止头文件重复包含,避免重复定义
 #define CONTACT_h
+#define DATA_FILE "contacts.txt"//文件名
 #define MAX_NAME 20//姓名最大长度
 #define MAX_SEX 6//性别
 #define MAX_PASS 12//电话号码
@@ -23,6 +24,10 @@ struct  Node *next;// 指向下一个节点
 Node* CheckName(char*,Node*head);//根据姓名查找联系人,返回对应节点指针
 void CreatNode(People date,Node*head);// 创建新节点
 void DeleteNode(Node*target,Node*head);//删除对应节点
+
+// 文件操作
+void SaveToFile(Node*head,char*filename);//保存到文件里
+void LoadFromFile(Node*head,char*filename);//从文件中读取
 
 //功能函数声明
 void Add(Node*head);//添加联系人,使用头插法

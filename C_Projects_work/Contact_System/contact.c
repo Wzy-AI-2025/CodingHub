@@ -29,6 +29,33 @@ void DeleteNode(Node*target,Node*head) {
     free(target);//释放删除节点的内存
 }
 
+void SaveToFile(Node*head,char*filename) {
+    FILE* fp=fopen(filename,"w");
+    if(fp==NULL){
+     printf("无法打开文件保存!\n");
+     return;
+    }
+    Node *cur=head->next;
+    while(cur!=NULL) {
+     fprintf(fp,"%s %s %s %s\n",cur->date.name,cur->date.sex,cur->date.pass,cur->date.adress);
+     cur = cur->next;
+    }
+    fclose(fp);
+}
+
+void LoadFromFile(Node*head,char*filename) {
+    FILE* fp=fopen(filename,"r");
+    if(fp==NULL){// 第一次运行没有文件是正常的
+     return;
+    }
+    People p;
+    while(fscanf(fp, "%19s %5s %11s %99s",p.name,p.sex,p.pass,p.adress)==4){
+        CreatNode(p,head);
+    }
+    fclose(fp);
+}
+
+
 void Add(Node*head) {
     People p;
     printf("请输入姓名:\n");
