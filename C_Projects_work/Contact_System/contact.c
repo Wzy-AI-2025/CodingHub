@@ -67,7 +67,7 @@ void Add(Node*head) {
     printf("请输入性别:\n");
     scanf("%3s",p.sex);
     printf("请输入电话号码:\n");
-    scanf("%10s",p.pass);
+    scanf("%11s",p.pass);
     printf("请输入地址:\n");
     scanf("%99s",p.adress);
     CreatNode(p,head);
