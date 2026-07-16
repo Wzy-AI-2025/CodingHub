@@ -1,9 +1,28 @@
-# 忽略虚拟环境（非常重要，别传几百MB的依赖）
-.venv/
-
-# 忽略环境变量（防 API Key 泄露）
-.env
-
-# 忽略 Python 缓存
+# ===== Python 基础 =====
+# 忽略 Python 编译缓存
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# 忽略本地环境变量（放 API Key，绝对不能传）
+.env
+
+# ===== 虚拟环境（最重要）=====
+# 忽略整个虚拟环境目录
+.venv/
+venv/
+ENV/
+
+# ===== PyCharm / IDE 配置 =====
+# 忽略 IDE 配置文件（可选，但推荐）
+.idea/
+*.iml
+
+# ===== 系统文件 =====
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
