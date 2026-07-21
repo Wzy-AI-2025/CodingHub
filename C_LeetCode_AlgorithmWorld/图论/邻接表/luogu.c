@@ -79,7 +79,7 @@ void heap_push(int* heap, int val) {
         i = parent;
     }
 }
-
+//
 int main(){
     int number, edgeCount;
     int u, v;
